@@ -1,19 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="wrapper">
+    <div id="app">
+      <Navbar />
+      <div id="nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/contact">Contact</router-link>
+      </div>
+      <router-view></router-view>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// <router-view></router-view> should be in the template to render components
+
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+  components: { Footer, Navbar },
+};
 </script>
 
 <style>
@@ -23,6 +36,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: -0px !important;
+  overflow: hidden;
+  min-height: 84.6vh;
+  background-color: #162447;
+  color: white;
+}
+body {
+  margin: 0;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
 }
 </style>
