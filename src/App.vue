@@ -6,7 +6,7 @@
         <router-link to="/">Home</router-link>
         <router-link to="/contact">Contact</router-link>
       </div>
-      <router-view></router-view>
+      <router-view />
     </div>
     <Footer />
   </div>
