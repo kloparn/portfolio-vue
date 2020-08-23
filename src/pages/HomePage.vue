@@ -1,5 +1,12 @@
 <template>
-  <div>Home page</div>
+  <section>
+    <div>Home page</div>
+    <div>Home page</div>
+    <div>Home page</div>
+    <div>Home page</div>
+    <div>Home page</div>
+    <div>Home page</div>
+  </section>
 </template>
 
 <script>
