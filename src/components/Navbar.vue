@@ -29,6 +29,9 @@ export default {
       enabled: false,
     };
   },
+  methods: {
+    warn: () => {},
+  },
 };
 </script>
 

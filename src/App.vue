@@ -2,8 +2,6 @@
   <div id="wrapper">
     <div id="app">
       <Navbar />
-      <div id="nav">
-      </div>
       <router-view />
     </div>
     <Footer />
@@ -11,8 +9,6 @@
 </template>
 
 <script>
-// <router-view></router-view> should be in the template to render components
-
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
@@ -36,7 +32,6 @@ export default {
   color: #2c3e50;
   margin: -0px !important;
   overflow: hidden;
-  min-height: 84.6vh;
   background-color: #162447;
   color: white;
 }

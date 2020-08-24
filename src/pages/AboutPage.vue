@@ -1,5 +1,5 @@
 <template>
-  <div>About page</div>
+  <main id="layout">About page</main>
 </template>
 
 <script>
@@ -8,4 +8,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#layout {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  color: whitevh;
+  min-height: 91vh;
+  text-shadow: 2px 2px black;
+}
+</style>
