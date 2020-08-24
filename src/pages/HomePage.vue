@@ -1,11 +1,6 @@
 <template>
   <section>
-    <div>Home page</div>
-    <div>Home page</div>
-    <div>Home page</div>
-    <div>Home page</div>
-    <div>Home page</div>
-    <div>Home page</div>
+    <h1>This Website is currently under construction</h1>
   </section>
 </template>
 
