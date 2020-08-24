@@ -7,15 +7,28 @@
       <router-link to="/projects" id="custom-link">Projects</router-link>
       <router-link to="/contact" id="custom-link">Contact</router-link>
     </div>
-    <div id="mode">sda</div>
+    <switches
+      id="mode"
+      v-model="enabled"
+      type-bold="true"
+      theme="bootstrap"
+      color="primary"
+    ></switches>
   </div>
 </template>
 
 <script>
+import Switches from "vue-switches";
+
 export default {
   name: "Navbar",
   props: {},
-  components: {},
+  components: { Switches },
+  data() {
+    return {
+      enabled: false,
+    };
+  },
 };
 </script>
 
@@ -59,6 +72,14 @@ export default {
   }
 }
 
+#switch-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1rem;
+  cursor: auto;
+}
+
 #links {
   display: flex;
   justify-content: space-evenly;
@@ -76,10 +97,10 @@ export default {
   padding-right: 2rem;
 }
 #custom-link:active {
-  color: black;
+  color: black !important;
 }
 #custom-link:hover {
-  color: rgb(39, 179, 226);
+  color: rgb(14, 90, 116);
   text-decoration: underline;
   opacity: 0.7;
 }
@@ -88,6 +109,5 @@ export default {
   display: flex;
   align-items: center;
   padding-right: 2vh;
-  padding-left: 10vh;
 }
 </style>
