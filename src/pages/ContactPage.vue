@@ -54,7 +54,6 @@ export default {
     url("~@/assets/contact-exp.png");
 }
 #custom-button {
-  padding: 1rem;
   font-size: 1.5rem;
   text-decoration: underline;
   border: none;
@@ -70,8 +69,7 @@ export default {
 }
 
 .custom-p {
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   text-align: center;

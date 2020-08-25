@@ -7,23 +7,20 @@
       <router-link to="/projects" id="custom-link">Projects</router-link>
       <router-link to="/contact" id="custom-link">Contact</router-link>
     </div>
-    <switches
-      id="mode"
-      v-model="enabled"
-      type-bold="true"
-      theme="bootstrap"
-      color="primary"
-    ></switches>
+    <div></div>
   </div>
 </template>
 
 <script>
-import Switches from "vue-switches";
+//import Switches from "vue-switches";
+//<switches id="mode" v-model="enabled" type-bold="true" theme="bootstrap" color="primary"></switches>
 
 export default {
   name: "Navbar",
   props: {},
-  components: { Switches },
+  components: {
+    /*Switches*/
+  },
   data() {
     return {
       enabled: false,
@@ -37,35 +34,55 @@ export default {
 
 <style scoped>
 #navbar {
-  z-index: 1;
+  z-index: 3;
   background-color: #343a40;
   height: 9vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: wrap;
   color: white;
   overflow: hidden;
   position: fixed;
   width: 100%;
 }
 
-@media (max-width: 1150px) {
-  #logo {
-    font-size: 2rem;
+@media (max-width: 958px) {
+  #navbar {
+    height: 15vh;
+    justify-content: center;
   }
   #links {
-    font-size: 1.5rem;
+    padding: 0 0 0 0 !important;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 600px) {
   #navbar {
-    font-size: 1.3rem;
+    justify-content: center;
+    position: relative !important;
+  }
+  #links {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+  }
+  #custom-link {
+    font-size: 1.5rem !important;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 474px) {
   #navbar {
-    padding-left: 0;
-    padding-right: 0;
+    height: 30vh;
+  }
+  #logo {
+    padding: 0 0 0 0 !important;
+  }
+  #links {
+    display: flex;
+    justify-content: center;
+
+    flex-flow: wrap;
   }
 }
 

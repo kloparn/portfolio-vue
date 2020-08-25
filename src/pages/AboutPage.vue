@@ -77,6 +77,7 @@ export default {
 #layout {
   display: flex;
   justify-content: space-evenly;
+  flex-flow: wrap;
   align-items: center;
   text-align: center;
   background-size: cover;
