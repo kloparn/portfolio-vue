@@ -7,7 +7,13 @@
       <router-link to="/projects" id="custom-link">Projects</router-link>
       <router-link to="/contact" id="custom-link">Contact</router-link>
     </div>
-    <switches id="mode" v-model="enabled" type-bold="true" theme="bootstrap" color="primary"></switches>
+    <switches
+      id="mode"
+      v-model="enabled"
+      type-bold="true"
+      theme="bootstrap"
+      color="primary"
+    ></switches>
   </div>
 </template>
 
@@ -31,6 +37,7 @@ export default {
 
 <style scoped>
 #navbar {
+  z-index: 1;
   background-color: #343a40;
   height: 9vh;
   display: flex;
