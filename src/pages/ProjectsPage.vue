@@ -5,7 +5,7 @@
       <b-card
         class="customEffect"
         v-bind:title="item.title"
-        img-src="~/assets/github-logo.png"
+        img-src="http://assets.stickpng.com/images/5847f98fcef1014c0b5e48c0.png"
         img-alt="Github-logo"
         img-top
         style="background-color: transparent; border: 1px solid black; padding: 1rem; margin: 1rem; width: 18rem;"
