@@ -7,13 +7,7 @@
       <router-link to="/projects" id="custom-link">Projects</router-link>
       <router-link to="/contact" id="custom-link">Contact</router-link>
     </div>
-    <switches
-      id="mode"
-      v-model="enabled"
-      type-bold="true"
-      theme="bootstrap"
-      color="primary"
-    ></switches>
+    <switches id="mode" v-model="enabled" type-bold="true" theme="bootstrap" color="primary"></switches>
   </div>
 </template>
 
@@ -43,6 +37,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   color: white;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 @media (max-width: 1150px) {

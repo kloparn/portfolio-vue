@@ -24,6 +24,7 @@ export default {
 <style scoped>
 #layout {
   display: flex;
+  justify-content: center;
   flex-flow: column;
   align-items: center;
   background-image: linear-gradient(
@@ -34,7 +35,7 @@ export default {
     url("~@/assets/background-exp.png");
   background-size: cover;
   color: white;
-  min-height: 91vh;
+  min-height: 100vh;
   text-shadow: 2px 2px black;
 }
 

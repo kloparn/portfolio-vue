@@ -44,7 +44,7 @@ export default {
   text-align: center;
   background-size: cover;
   color: white;
-  min-height: 91vh;
+  min-height: 100vh;
   text-shadow: 2px 2px black;
   background-image: linear-gradient(
       to bottom,

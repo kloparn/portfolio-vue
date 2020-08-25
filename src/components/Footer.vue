@@ -76,7 +76,7 @@ export default {
 */
 #custom-footer {
   background-color: #1b1b2f;
-  border-top: 2px solic #ccc;
+  border-top: 2px solid #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;

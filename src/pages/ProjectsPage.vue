@@ -15,7 +15,7 @@ export default {
   text-align: center;
   background-size: cover;
   color: whitevh;
-  min-height: 91vh;
+  min-height: 100vh;
   text-shadow: 2px 2px black;
 }
 </style>
