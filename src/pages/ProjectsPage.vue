@@ -8,9 +8,29 @@
         img-src="http://assets.stickpng.com/images/5847f98fcef1014c0b5e48c0.png"
         img-alt="Github-logo"
         img-top
-        style="background-color: transparent; border: 1px solid black; padding: 1rem; margin: 1rem; width: 18rem;"
-      ></b-card>
-      <br />
+        style="background-color: transparent; border: 1px solid black; padding: 1rem; margin: 1rem; width: 18rem; min-height: 85vh;"
+      >
+        <b-card-text>{{ item.description }}</b-card-text>
+        <b-card-footer>Language: {{ item.language }}</b-card-footer>
+        <b-card-text>
+          Github:
+          <br />
+          <a v-bind:href="item.url" target="blank">
+            {{
+            item.url
+            }}
+          </a>
+        </b-card-text>
+        <b-card-text v-if="item.homepage === 'null'"></b-card-text>
+        <b-card-text v-else>
+          <p>
+            Homepage:
+            <br />
+            <a :href="item.homepage">{{ item.homepage }}</a>
+          </p>
+        </b-card-text>
+        <b-card-footer>Last updated: {{ toLocalTimeString(item.updated) }}</b-card-footer>
+      </b-card>
     </div>
   </div>
 </template>
@@ -30,7 +50,11 @@ export default {
       .get("https://dotnet-core-backend.herokuapp.com/api/Github")
       .then((Response) => (this.repos = Response.data));
   },
-  components() {},
+  methods: {
+    toLocalTimeString: (date) => {
+      return new Date(date).toLocaleDateString();
+    },
+  },
 };
 </script>
 
@@ -46,8 +70,14 @@ export default {
   transition: all 0.2s linear;
   text-shadow: 2px 2px black;
 }
+
+.customEffect {
+  transform: scale(0.95);
+  transition: all 0.2s linear;
+}
+
 .customEffect:hover {
-  transform: scale(1.07);
+  transform: scale(1.02);
   transition: all 0.2s linear;
   border-color: white !important;
 }
