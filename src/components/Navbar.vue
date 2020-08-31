@@ -6,6 +6,7 @@
       <router-link to="/about" id="custom-link">About</router-link>
       <router-link to="/projects" id="custom-link">Projects</router-link>
       <router-link to="/contact" id="custom-link">Contact</router-link>
+      <a id="react" href="https://adamhakansson.com" target="_blank">React</a>
     </div>
     <div></div>
   </div>
@@ -47,7 +48,7 @@ export default {
   width: 100%;
 }
 
-@media (max-width: 958px) {
+@media (max-width: 1040px) {
   #navbar {
     height: 15vh;
     justify-content: center;
@@ -56,7 +57,7 @@ export default {
     padding: 0 0 0 0 !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #navbar {
     justify-content: center;
     position: relative !important;
@@ -71,7 +72,7 @@ export default {
     font-size: 1.5rem !important;
   }
 }
-@media (max-width: 474px) {
+@media (max-width: 600px) {
   #navbar {
     height: 30vh;
   }
@@ -84,6 +85,13 @@ export default {
 
     flex-flow: wrap;
   }
+}
+
+#react {
+  font-size: 1.7rem;
+  border: 2px solid #ccc;
+  border-radius: 100%;
+  padding: 0.2rem;
 }
 
 #logo {
