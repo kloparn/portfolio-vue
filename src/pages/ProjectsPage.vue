@@ -16,17 +16,15 @@
           Github:
           <br />
           <a v-bind:href="item.url" target="blank">
-            {{
-            item.url
-            }}
+            <b-button variant="outline-primary">GitHub</b-button>
           </a>
         </b-card-text>
         <b-card-text v-if="item.homepage === 'null'"></b-card-text>
         <b-card-text v-else>
           <p>
-            Homepage:
-            <br />
-            <a :href="item.homepage">{{ item.homepage }}</a>
+            <a :href="item.homepage">
+              <b-button variant="outline-primary">HomePage</b-button>
+            </a>
           </p>
         </b-card-text>
         <b-card-footer>Last updated: {{ toLocalTimeString(item.updated) }}</b-card-footer>
